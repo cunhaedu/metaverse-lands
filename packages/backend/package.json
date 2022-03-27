@@ -1,0 +1,31 @@
+{
+  "name": "@metaverse-lands/backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "generate-types": "typechain --target=truffle-v5 'build/contracts/*.json'",
+    "postinstall": "truffle compile && npm run generate-types",
+    "migrate": "tsc -p ./tsconfig.migrate.json --outDir migrations && truffle migrate",
+    "test": "truffle test",
+    "coverage": "truffle run coverage",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.5.0",
+    "ganache-cli": "^6.12.2",
+    "truffle": "^5.5.6"
+  },
+  "devDependencies": {
+    "@typechain/truffle-v5": "^8.0.0",
+    "@types/chai": "^4.3.0",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "^17.0.23",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "solidity-coverage": "^0.7.20",
+    "ts-node": "^10.7.0",
+    "typechain": "^8.0.0"
+  }
+}

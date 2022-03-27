@@ -1,0 +1,19 @@
+{
+  "name": "metaverse-lands",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "author": {
+    "name": "Eduardo Assunção",
+    "email": "cunhaedu01@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}
